@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: matchmaking-service
+          uri: lb://matchmaking-service
+          predicates:
+            - Path=/server/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**,/auth/**,/profile
