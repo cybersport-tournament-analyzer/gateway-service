@@ -5,7 +5,7 @@ spring:
     config:
       enabled: true
       fail-fast: true
-      label: deploy-test
+      label: master
       uri: http://localhost:8888/
   config:
     import: optional:config-service:http://localhost:8888/
