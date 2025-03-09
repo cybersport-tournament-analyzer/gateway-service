@@ -6,7 +6,7 @@ spring:
           uri: lb://matchmaking-service
           predicates:
             - Path=/server/**
-        - id: user-service
-          uri: lb://user-service
+        - id: auth-service
+          uri: lb://auth-service
           predicates:
             - Path=/users/**,/auth/**,/profile
